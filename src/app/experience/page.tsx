@@ -8,44 +8,41 @@ export default function ExperiencePage() {
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-4xl px-6 py-10 sm:px-10 lg:px-12">
-      <header className="flex items-center justify-between border-b border-black/15 pb-5 text-sm uppercase tracking-[0.3em] text-black/55">
-        <Link className="transition hover:text-black" href="/">
-          Your Name
-        </Link>
-        <nav className="flex items-center gap-4 tracking-normal normal-case text-black/75">
-          <Link className="transition hover:text-black" href="/projects">
-            Projects
-          </Link>
-          <Link className="transition hover:text-black" href="/">
+      <section className="py-16 sm:py-20">
+        <nav
+          aria-label="Breadcrumb"
+          className="flex items-center gap-2 text-md text-(--muted-strong) tracking-wide"
+        >
+          <Link className="transition hover:text-foreground" href="/">
             Home
           </Link>
+          <span aria-hidden="true" className="text-(--muted-strong)">
+            &gt;
+          </span>
+          <span aria-current="page" className="text-(--muted)">
+            Experience
+          </span>
         </nav>
-      </header>
-
-      <section className="py-16 sm:py-20">
-        <p className="text-xs uppercase tracking-[0.35em] text-black/45">
-          Experience
-        </p>
-        <h1 className="mt-4 font-display text-5xl leading-none tracking-[-0.06em] text-black sm:text-6xl">
+        <h1 className="mt-4 font-display text-5xl leading-none tracking-[-0.06em] text-foreground sm:text-6xl">
           Work history.
         </h1>
         <div className="mt-12 grid gap-5">
           {experience.map((item) => (
             <article
               key={item.role}
-              className="border-t border-black/10 pt-5 first:border-t-0 first:pt-0"
+              className="border-t border-(--border) pt-5 first:border-t-0 first:pt-0"
             >
               <div className="grid gap-3 sm:grid-cols-[0.85fr_1.15fr] sm:gap-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-black/45">
+                  <p className="text-xs uppercase tracking-[0.3em] text-(--muted-strong)">
                     {item.period}
                   </p>
-                  <h2 className="mt-2 text-2xl font-medium text-black">
+                  <h2 className="mt-2 text-2xl font-medium text-foreground">
                     {item.company}
                   </h2>
-                  <p className="text-sm text-black/65">{item.role}</p>
+                  <p className="text-sm text-(--muted)">{item.role}</p>
                 </div>
-                <p className="text-base leading-7 text-black/72">
+                <p className="text-base leading-7 text-(--muted)">
                   {item.summary}
                 </p>
               </div>

@@ -143,7 +143,7 @@ export function AnimatedGraphBackground() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       {/* Soft gradients add depth without introducing another strong color. */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.06),transparent_42%),radial-gradient(circle_at_center,rgba(0,0,0,0.035),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.05),transparent_34%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.06),transparent_42%),radial-gradient(circle_at_center,rgba(0,0,0,0.035),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.05),transparent_34%)] [data-theme='dark']&:bg-[radial-gradient(circle_at_top_left,rgba(88,166,255,0.14),transparent_42%),radial-gradient(circle_at_center,rgba(255,255,255,0.04),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_34%)]" />
 
       {/* The SVG draws the connecting lines across the full viewport. */}
       <svg
@@ -163,7 +163,7 @@ export function AnimatedGraphBackground() {
                 x2={end.x}
                 y2={end.y}
                 vectorEffect="non-scaling-stroke"
-                stroke="rgba(0, 0, 0, 0.1)"
+                stroke="var(--graph-line-soft)"
                 strokeWidth="3"
               />
               <line
@@ -172,7 +172,7 @@ export function AnimatedGraphBackground() {
                 x2={end.x}
                 y2={end.y}
                 vectorEffect="non-scaling-stroke"
-                stroke="rgba(0, 0, 0, 0.3)"
+                stroke="var(--graph-line-strong)"
                 strokeWidth="1.2"
               />
             </g>
@@ -184,7 +184,7 @@ export function AnimatedGraphBackground() {
       {nodes.map((node, index) => (
         <span
           key={`${node.x}-${node.y}`}
-          className="graph-node absolute rounded-full border border-black/55 bg-blue-500 shadow-[0_0_0_1px_rgba(0,0,0,0.1),0_0_18px_rgba(0,0,0,0.05)]"
+          className="graph-node absolute rounded-full border"
           style={{
             left: `${renderedPositions[index]?.x ?? node.x * viewport.width}px`,
             top: `${renderedPositions[index]?.y ?? node.y * viewport.height}px`,
@@ -192,6 +192,10 @@ export function AnimatedGraphBackground() {
             height: `${node.size}px`,
             transform: "translate(-50%, -50%)",
             opacity: index % 2 === 0 ? 0.72 : 0.52,
+            backgroundColor: "var(--graph-node-fill)",
+            borderColor: "var(--graph-node-border)",
+            boxShadow:
+              "0 0 0 1px var(--graph-node-shadow), 0 0 18px var(--graph-node-shadow)",
           }}
         />
       ))}
@@ -200,8 +204,7 @@ export function AnimatedGraphBackground() {
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "radial-gradient(circle at 32% 48%, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 18%, rgba(255,255,255,0.82) 36%, rgba(255,255,255,0.42) 58%, rgba(255,255,255,0) 78%)",
+          background: "var(--graph-fade)",
         }}
       />
     </div>
