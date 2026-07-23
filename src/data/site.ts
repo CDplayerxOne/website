@@ -15,41 +15,37 @@ export const siteContent = {
   },
   projects: [
     {
-      name: "Studio portfolio refresh",
-      type: "Case study",
+      name: "Photo Tagger",
       summary:
-        "Reworked a cluttered agency homepage into a crisp single-page narrative with clearer hierarchy, stronger calls to action, and faster load times.",
-      href: "#contact",
+        "Tool that feeds images from Flickr into a model that detects specified logos and tags them accordingly. The job can be run on a scheduled basis or on-demand. ",
+      href: "https://github.com/CDplayerxOne/Photo-Tagger",
     },
     {
-      name: "Personal brand site",
-      type: "Website",
+      name: "Stack Overflow",
       summary:
-        "Built a minimal profile site that highlights the person first and the technology second, with a content model that is easy to update.",
-      href: "#contact",
+        "No, it's not actually a Stack Overflow. It's actually a custom pentamino game with extra power ups.",
+      href: "https://github.com/CDplayerxOne/Stack-Overflow",
     },
     {
-      name: "Launch landing page",
-      type: "Product",
-      summary:
-        "Created a focused landing page with a simple message structure, sharp typography, and sections tuned for quick scanning on mobile.",
-      href: "#contact",
+      name: "LePong James",
+      summary: "Pong but Lebron James style",
+      href: "https://github.com/CDplayerxOne/LePong-James",
     },
   ],
   experience: [
     {
-      company: "Independent Builder",
-      role: "Design and development partner",
-      period: "2024 - Present",
+      company: "FIRST Robotics Canada",
+      role: "Administrative Coordinator Intern",
+      period: "July 2025 - August 2025",
       summary:
-        "Work with individuals and small teams to turn ideas into production-ready websites, from content structure through implementation and launch.",
+        "Designed social media posts for the upcoming FIRST Robotics season and ran camps to provide students with hands-on experience in STEM and robotics. ",
     },
     {
-      company: "Creative Studio",
-      role: "Frontend developer",
-      period: "2022 - 2024",
+      company: "FRC Team 8574 Audeamus",
+      role: "Electrical and Software Lead",
+      period: "September 2021 - June 2025",
       summary:
-        "Implemented responsive marketing pages and internal tools with an emphasis on reusable components, accessibility, and maintainable code.",
+        "Led the electrical and software team to design and implement the electrical system and software for an FRC robot. The Team won the District Rookie All-Star award in 2022 and attended the FIRST Championship. ",
     },
   ],
   skills: [

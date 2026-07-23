@@ -32,11 +32,8 @@ export default function ProjectsPage() {
               key={project.name}
               className="border-t border-(--border) pt-5 first:border-t-0 first:pt-0"
             >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between rounded-xl">
                 <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-[0.3em] text-(--muted-strong)">
-                    {project.type}
-                  </p>
                   <h2 className="text-2xl font-medium text-foreground">
                     {project.name}
                   </h2>
@@ -45,7 +42,7 @@ export default function ProjectsPage() {
                   </p>
                 </div>
                 <a
-                  className="text-sm text-foreground underline decoration-(--border-strong) underline-offset-4 transition hover:decoration-[color:var(--foreground)]"
+                  className="text-sm text-foreground underline decoration-(--border-strong) underline-offset-4 transition hover:decoration-foreground"
                   href={project.href}
                 >
                   View
