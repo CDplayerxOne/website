@@ -11,19 +11,24 @@ export default function Home() {
       <section className="flex flex-1 items-start py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl space-y-8">
           <div className="space-y-4">
-            <h1 className="text-6xl font-medium leading-none tracking-[-0.06em] text-[color:var(--foreground)] sm:text-7xl lg:text-8xl">
+            <h1 className="text-6xl font-medium leading-none tracking-[-0.06em] text-foreground sm:text-7xl lg:text-8xl">
               {about.name}
             </h1>
-            <p className="max-w-xl text-lg leading-8 text-[color:var(--muted)] sm:text-xl sm:leading-9">
-              {about.summary}
+            <p className="max-w-xl text-lg leading-8 text-(--muted) sm:text-xl sm:leading-9">
+              {about.summary.split("\n").map((line, index) => (
+                <span key={index}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </p>
           </div>
 
-          <div className="space-y-3 border-t border-[color:var(--border)] pt-3">
-            <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--muted-strong)]">
+          <div className="space-y-3 border-t border-(--border) pt-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-(--muted-strong)">
               About me
             </p>
-            <ul className="space-y-2 text-base leading-7 text-[color:var(--muted)] sm:text-lg">
+            <ul className="space-y-2 text-base leading-7 text-(--muted) sm:text-lg">
               {about.facts.map((fact) => (
                 <li key={fact}>• {fact}</li>
               ))}
@@ -34,7 +39,7 @@ export default function Home() {
             {about.links.map((link) => (
               <a
                 key={link.label}
-                className="rounded-md border border-[color:var(--foreground)] px-4 py-2 text-sm text-[color:var(--foreground)] transition hover:bg-[color:var(--foreground)] hover:text-[color:var(--background)]"
+                className="rounded-md border border-foreground px-4 py-2 text-sm text-foreground transition hover:bg-[color:var(--foreground)] hover:text-[color:var(--background)]"
                 href={link.href}
               >
                 {link.label}

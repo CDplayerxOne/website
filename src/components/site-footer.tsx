@@ -43,10 +43,10 @@ export function SiteFooter() {
   const { contact, footer } = siteContent;
 
   return (
-    <footer className="flex flex-col gap-4 border-t border-[color:var(--border)] py-6 text-sm text-[color:var(--muted-strong)] sm:flex-row sm:items-center sm:justify-between">
-      <div className="flex items-center gap-5 text-[color:var(--muted)]">
+    <footer className="flex flex-col gap-4 border-t border-(--border) py-6 text-sm text-(--muted-strong) sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex items-center gap-5 text-(--muted)">
         <a
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] transition hover:border-[color:var(--foreground)] hover:text-[color:var(--foreground)]"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-(--border) transition hover:border-foreground hover:text-foreground"
           href={contact.links[0].href}
           aria-label="GitHub"
           title="GitHub"
@@ -54,7 +54,7 @@ export function SiteFooter() {
           <GithubIcon />
         </a>
         <a
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] transition hover:border-[color:var(--foreground)] hover:text-[color:var(--foreground)]"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-(--border) transition hover:border-foreground hover:text-foreground"
           href={`mailto:${contact.email}`}
           aria-label="Email"
           title="Email"
@@ -62,7 +62,7 @@ export function SiteFooter() {
           <MailIcon />
         </a>
         <a
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] transition hover:border-[color:var(--foreground)] hover:text-[color:var(--foreground)]"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-(--border) transition hover:border-foreground hover:text-foreground"
           href={contact.links[1].href}
           aria-label="LinkedIn"
           title="LinkedIn"
@@ -70,10 +70,9 @@ export function SiteFooter() {
           <LinkedinIcon />
         </a>
       </div>
-      <div className="space-y-1 text-[color:var(--muted-strong)] sm:text-right">
+      {/* <div className="space-y-1 text-(--muted-strong) sm:text-right">
         <p>{footer.note}</p>
-        <p>{footer.credit}</p>
-      </div>
+      </div> */}
     </footer>
   );
 }

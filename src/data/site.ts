@@ -2,11 +2,11 @@ export const siteContent = {
   about: {
     name: "Corey Dai",
     summary:
-      "I build clean, content-first websites that make a strong first impression without getting in the way of the work itself.",
+      "I hope to one day build intelligent systems that are safe, robust and can make a positive impact on people's lives.",
     facts: [
-      "Based in Your City and open to remote work.",
-      "Focuses on thoughtful web experiences and simple interfaces.",
-      "Likes typography, clarity, and leaving out what is not needed.",
+      "Data Science + CS @ U of T",
+      "I play hockey 🏒 and enjoy watching basketball 🏀 and football 🏈",
+      "Interested in AI, ML, Robotics and Autonomous Vehicles",
     ],
     links: [
       { label: "Projects", href: "/projects" },
@@ -62,17 +62,16 @@ export const siteContent = {
     "Tailwind CSS",
   ],
   contact: {
-    heading: "Let us make the next version of your website feel sharper.",
-    summary:
-      "If you want a polished personal site, a portfolio refresh, or help turning a rough concept into a clean web presence, I would love to hear from you.",
-    email: "hello@yourname.dev",
+    email: "corey.dai@mail.utoronto.ca",
     links: [
-      { label: "GitHub", href: "https://github.com/" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "GitHub", href: "https://github.com/CDplayerxOne" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/corey-dai-253734337/",
+      },
     ],
   },
   footer: {
-    note: "Built with Next.js and designed to be easy to customize.",
-    credit: "Replace the placeholder content with your real details.",
+    note: "Built with Next.js",
   },
 } as const;
