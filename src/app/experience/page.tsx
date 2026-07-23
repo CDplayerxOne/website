@@ -24,7 +24,7 @@ export default function ExperiencePage() {
           </span>
         </nav>
         <h1 className="mt-4 font-display text-5xl leading-none tracking-[-0.06em] text-foreground sm:text-6xl">
-          Work history.
+          Experience.
         </h1>
         <div className="mt-12 grid gap-5">
           {experience.map((item) => (

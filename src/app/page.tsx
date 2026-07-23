@@ -39,7 +39,7 @@ export default function Home() {
             {about.links.map((link) => (
               <a
                 key={link.label}
-                className="rounded-md border border-foreground px-4 py-2 text-sm text-foreground transition hover:bg-[color:var(--foreground)] hover:text-[color:var(--background)]"
+                className="rounded-md border border-foreground px-4 py-2 text-sm text-foreground transition hover:bg-foreground hover:text-background"
                 href={link.href}
               >
                 {link.label}
