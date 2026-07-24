@@ -2,7 +2,7 @@
 
 You found the code for my personal website! Feel free to peek around.
 
-I decided to go for a minimalistic design here, hoping the site content would be what stands out.
+I decided to go for a minimalistic design here, hoping the content on the site would be what stands out.
 
 However, right now I don't have too much experience yet so that day will have to wait.
 
