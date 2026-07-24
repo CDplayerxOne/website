@@ -2,6 +2,8 @@
 
 You found the code for my personal website! Feel free to peek around.
 
+I created this site using Next.js and Tailwind CSS.
+
 I decided to go for a minimalistic design here, hoping the content on the site would be what stands out.
 
 However, right now I don't have too much experience yet so that day will have to wait.
