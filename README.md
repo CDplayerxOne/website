@@ -1,6 +1,6 @@
 # Hey there!
 
-You found the code for my personal website! Feel free to peak around.
+You found the code for my personal website! Feel free to peek around.
 
 I decided to go for a minimalistic design here, hoping the site content would be what stands out.
 
