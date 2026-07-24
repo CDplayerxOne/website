@@ -31,6 +31,14 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          id="theme-favicon"
+          rel="icon"
+          type="image/svg+xml"
+          href="/icon-light.svg"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Script id="theme-init" strategy="beforeInteractive">
           {`(() => {
@@ -45,9 +53,19 @@ export default function RootLayout({
 
               document.documentElement.dataset.theme = theme;
               document.documentElement.style.colorScheme = theme;
+
+              const favicon = document.getElementById('theme-favicon');
+              if (favicon) {
+                favicon.href = theme === 'dark' ? '/icon-dark.svg' : '/icon-light.svg';
+              }
             } catch (error) {
               document.documentElement.dataset.theme = 'light';
               document.documentElement.style.colorScheme = 'light';
+
+              const favicon = document.getElementById('theme-favicon');
+              if (favicon) {
+                favicon.href = '/icon-light.svg';
+              }
             }
           })();`}
         </Script>

@@ -57,6 +57,8 @@ export default function ProjectsPage() {
           <a
             className="inline-flex w-fit items-center rounded-md border border-foreground px-4 py-2 text-sm text-foreground transition hover:bg-foreground hover:text-background"
             href="https://github.com/CDplayerxOne?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             View all projects
           </a>

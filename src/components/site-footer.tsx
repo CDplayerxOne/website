@@ -50,6 +50,8 @@ export function SiteFooter() {
           href={contact.links[0].href}
           aria-label="GitHub"
           title="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <GithubIcon />
         </a>
@@ -58,6 +60,8 @@ export function SiteFooter() {
           href={`mailto:${contact.email}`}
           aria-label="Email"
           title="Email"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <MailIcon />
         </a>
@@ -66,13 +70,12 @@ export function SiteFooter() {
           href={contact.links[1].href}
           aria-label="LinkedIn"
           title="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <LinkedinIcon />
         </a>
       </div>
-      {/* <div className="space-y-1 text-(--muted-strong) sm:text-right">
-        <p>{footer.note}</p>
-      </div> */}
     </footer>
   );
 }
